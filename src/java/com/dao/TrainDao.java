@@ -12,11 +12,7 @@ import java.util.Set;
  * @author Administrator
  */
 public interface TrainDao {
-    boolean create(Train train);
-
+    
     Set<Train> read();
 
-    boolean update();
-
-    boolean delete(int id);
 }

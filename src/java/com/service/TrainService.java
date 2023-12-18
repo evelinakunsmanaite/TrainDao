@@ -5,6 +5,7 @@
 package com.service;
 
 import com.model.Train;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -12,11 +13,8 @@ import java.util.Set;
  * @author Administrator
  */
 public interface TrainService {
-    boolean create(Train train);
-
     Set<Train> read();
-
-    boolean update();
-
-    boolean delete(int id);
+    List<Train> filterTrainsByDestination(String destination);
+    List<Train> filterTrainsByDestinationAndTime(String destination, String departureTime);
+    List<Train> filterTrainsByDestinationAndSeatsType(String destination, String seatsType);
 }
