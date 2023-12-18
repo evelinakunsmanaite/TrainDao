@@ -1,0 +1,126 @@
+body {
+    background-image: url(https://img.freepik.com/premium-vector/railroad-in-summer-season_198696-662.jpg?w=2000);
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+}
+h1 {
+    color: #333333;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+}
+
+.column {
+
+    background-color: #4671D5;
+}
+
+.column:nth-child(1) {
+    width: 400px;
+    height: 275px;
+    margin: 10px; 
+}
+
+.column:nth-child(2) {
+    width: 400px;
+    height: 350px;
+    margin: 10px; 
+}
+
+.column:nth-child(3) {
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+}
+.column:nth-child(4) {
+    width: 400px;
+    height: 400px;
+    margin: 10px;  
+}
+
+.b {
+    background-color: #1240AB;
+    color: #ffffff;
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
+    border-color: #06266F;
+    border-radius: 17px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #1240AB;
+    color: #ffffff;
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
+    border-color: #06266F;
+    border-radius: 17px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2A4480;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.avatar-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.btn-back {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
