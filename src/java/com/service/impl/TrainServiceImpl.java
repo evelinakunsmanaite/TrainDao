@@ -51,10 +51,14 @@ public class TrainServiceImpl implements TrainService{
 
 private boolean checkSeatsAvailability(Train train, String seatsType) {
             return switch (seatsType) {
-                case "Общие" -> train.getSeatsObjie() > 0;
+                case "Общие"  -> train.getSeatsObjie() > 0;
                 case "Купе" -> train.getSeatsKupe() > 0;
                 case "Люкс" -> train.getSeatsLux() > 0;
                 case "Плацкарт" -> train.getSeatsPlackart() > 0;
+                case "Common"  -> train.getSeatsObjie() > 0;
+                case "Coupe" -> train.getSeatsKupe() > 0;
+                case "Luxury" -> train.getSeatsLux() > 0;
+                case "Platzkart" -> train.getSeatsPlackart() > 0;
                 default -> false;
             };
 }

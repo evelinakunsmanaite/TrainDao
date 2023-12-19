@@ -14,6 +14,7 @@
             </style>
         </head>
         <body>
+            <div class="container">
             <h2><fmt:message key="update" /></h2>
 
             <form action="UpdateServlet" method="post">
@@ -37,7 +38,7 @@
             <form action="page" method="post">
                 <input type="hidden" name="page" value="toAdmin">
                 <input type="submit" value="<fmt:message key="toHomepage.button" />">
-            </form>  
+            </form>  </div>
         </body>
     </fmt:bundle>
 </html>

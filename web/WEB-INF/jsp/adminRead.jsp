@@ -9,9 +9,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <fmt:setLocale value='${pageContext.response.locale}' scope="session"/>
         <fmt:bundle basename="com.localization.messages.msg">
-<!--            <style>
+            <style>
                 <%@include file="/resources/css/spisok.css"%>
-            </style>-->
+            </style>
         </head>
         <body>
             <!-- Таблица с абитуриентами -->
@@ -33,11 +33,13 @@
                     <td>${user.password}</td>
 
                     <td>
-                        <form action="DeleteServlet" method="post">
+                        <form action="DeleteServlet" method="post" onsubmit="return confirmDelete('${user.id}');">
                             <input type="hidden" name="id" value="${user.id}"/>
                             <input type="submit" value="<fmt:message key="delete" />"/>
                         </form>
                     </td>
+
+
                     <td>
                         <form action="UpdateServlet">
                             <input type="hidden" name="id" value="${user.id}"/>
@@ -51,6 +53,11 @@
             <input type="hidden" name="page" value="toAdmin">
             <input type="submit" value="<fmt:message key="toHomepage" />">
         </form>
+        <script>
+            function confirmDelete(userId) {
+                return confirm("Вы уверены, что хотите удалить запись с ID " + userId + "?");
+            }
+        </script>
     </body>
 </fmt:bundle>
 </html>

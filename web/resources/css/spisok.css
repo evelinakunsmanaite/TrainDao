@@ -1,32 +1,35 @@
 table {
-                font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-                text-align: center;
-                border-collapse: collapse;
-                border-spacing: 5px;
-                background: #679FD2;
-                border-radius: 20px;
-            }
-            th {
-                font-size: 22px;
-                font-weight: 300;
-                padding: 12px 10px;
-                border-bottom: 2px solid #06266F;
-                color: #06266F;
-            }
-            td {
-                padding: 10px;
-                color: #ffffff;
-            }
-            .center {
-                text-align: center;
-                margin-top: 20px;
-            }
-            .b {
-                background-color: #1240AB;
-                color: #ffffff;
-                height: 30px;
-                width: 250px;
-                font-size: 15px;
-                border-color: #06266F;
-                border-radius: 17px;
-            }
+                    margin-top: 20px;
+                    width: 100%;
+                    border-collapse: collapse;
+                    background-color: #4CAF50; /* Зелёный цвет фона таблицы */
+                    color: white; /* Белый цвет текста в таблице */
+                }
+
+                th, td {
+                    padding: 15px;
+                    border: 1px solid #ddd;
+                }
+
+                th {
+                    background-color: #45a049; /* Зелёный цвет фона ячейки заголовка */
+                }
+
+                /* Цвет кнопок в формах */
+                input[type="submit"], input[type="button"] {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+
+                input[type="submit"]:hover, input[type="button"]:hover {
+                    background-color: #45a049;
+                }

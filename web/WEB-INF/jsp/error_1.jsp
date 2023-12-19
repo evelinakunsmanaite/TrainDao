@@ -4,42 +4,43 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Поиск ж/д билетов</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:100,200,300,400" rel="stylesheet">
-        <c:url var="css" value="/resources/css/error.css"></c:url> <!-- Генерируем URL для CSS файла -->
-        <link rel="stylesheet" href="${css}" type="text/css"/>
-    </head>
-    <body class="loading">
-        <h1>500</h1>
-        <h2>Искомые данные отсутствуют или введены с ошибкой. 
-            Проверьте, пожалуйста, данные <b>:(</b></h2>
-        <div class="gears">
-            <div class="gear one">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="gear two">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="gear three">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+<head>
+     <fmt:setLocale value='${pageContext.response.locale}' scope="session"/>
+     <fmt:bundle basename="com.localization.messages.msg">
+    <title> <fmt:message key="error.title" /></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:100,200,300,400" rel="stylesheet">
+  
+              <style>
+                <%@include file="/resources/css/error.css" %>
+            </style>
+</head>
+<body class="loading">
+    <h1>500</h1>
+    <h2><fmt:message key="error.dataMissing" /></h2>
+    <div class="gears">
+        <div class="gear one">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="center">
-            <form action="WelcomeServlet">
-                <input type="hidden" name="toCab" value="true"/> 
-                <input class="b" type="submit" value="Назад"/> 
-            </form>
+        <div class="gear two">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-
-    </body>
-
+        <div class="gear three">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="center">
+        <form action="page" method="post">
+            <input type="hidden" name="page" value="toUser">
+            <input type="submit" value="<fmt:message key="button.toHomepage" />">
+        </form>
+    </div>
+</body></fmt:bundle>
 </html>

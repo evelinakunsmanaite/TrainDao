@@ -8,12 +8,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <fmt:setLocale value='${pageContext.response.locale}' scope="session"/>
         <fmt:bundle basename="com.localization.messages.msg">
-<!--            <style>
+            <style>
                 <%@include file="/resources/css/adminAdd.css"%>
-            </style>-->
+            </style>
         </head>
         <body>
-
+            <div class="container">
             <!-- Форма добавления -->
             <h2><fmt:message key="title.addUser" /></h2>
             <form action="AddServlet" method="post">
@@ -32,7 +32,7 @@
             <form action="page" method="post">
                 <input type="hidden" name="page" value="toAdmin">
                 <input type="submit" value="<fmt:message key="button.toHomepage"/>">
-            </form>  
+            </form>  </div>
         </body>
     </fmt:bundle>
 

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Administrator
  */
-@WebFilter(urlPatterns = {"/HouseSelectServlet"})
+@WebFilter(urlPatterns = {"/punktServlet","/trainServlet","/trainsServlet","/trainsssServlet"})
 public class SessionTimeOutFilter implements Filter {
 
     @Override
